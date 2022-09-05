@@ -43,8 +43,6 @@ function operate(num1, num2, operator) {
     else return NaN
 }    
 
-console.log(operate(6, 4, '*'));
-
 //Create the functions that populate the display when you click the 
 //number buttons… you should be storing the ‘display value’ in a variable somewhere 
 //for use in the next step.
@@ -73,9 +71,6 @@ operatorButton.forEach((operator => {
         clickedOperator = operator.textContent;
         previousOperand.textContent = storedNumber + clickedOperator;
         storedNumber = '';
-
-        console.log('FirstNumber' + firstNumber + 'Stored' + storedNumber)
-        console.log(clickedOperator);
     })
 }));
 
@@ -90,8 +85,6 @@ function displayResult() {
     currentOperand.textContent = result;
     previousOperand.textContent = firstNumber + ' ' + clickedOperator + ' ' + storedNumber;
     storedNumber = result;
-    console.log('FirstNumber' + firstNumber + 'Stored' + storedNumber);
-
 }
 
 
