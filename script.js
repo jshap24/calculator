@@ -39,7 +39,7 @@ function operate(num1, num2, operator) {
     if (operator === '+') return add(num1, num2)
     else if (operator === '-') return subtract(num1, num2)
     else if (operator === '*') return multiply(num1, num2)
-    else if (operator === '/') return divide(num1, num2)
+    else if (operator === '÷') return divide(num1, num2)
     else return NaN
 }    
 
@@ -82,7 +82,8 @@ if(equalsKey) {
 
 function displayResult() {
     result = operate(parseFloat(firstNumber), parseFloat(storedNumber), clickedOperator);
-    currentOperand.textContent = result;
+    let roundedResult=Math.round(result*100000000000000)/100000000000000;
+    currentOperand.textContent = roundedResult;
     previousOperand.textContent = firstNumber + ' ' + clickedOperator + ' ' + storedNumber;
     storedNumber = result;
 }
